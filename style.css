@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  position: relative;
+  height: 100vh;
+}
+.circle {
+  position: absolute;
+  height: 90vh;
+  width: 90vh;
+  border-radius: 50%;
+  background-color: #264653;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hour {
+  position: absolute;
+  height: 70vh;
+  width: 7vh;
+  border-radius: 7vh;
+  background-color: #2a9d8f;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: clock 86400s linear infinite;
+
+  .arrow {
+    text-align: center;
+    font-size: 7vh;
+  }
+}
+.minute {
+  position: absolute;
+  height: 50vh;
+  width: 5vh;
+  border-radius: 5vh;
+  background-color: #e9c46a;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: clock 3600s linear infinite;
+
+  .arrow {
+    text-align: center;
+    font-size: 5vh;
+  }
+}
+.second {
+  position: absolute;
+  height: 30vh;
+  width: 3vh;
+  border-radius: 3vh;
+  background-color: #f4a261;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: clock 60s linear infinite;
+
+  .arrow {
+    text-align: center;
+    font-size: 3vh;
+  }
+}
+@keyframes clock {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media screen and (max-width: 510px) {
+  .circle {
+    height: 90vw;
+    width: 90vw;
+  }
+  .hour {
+    height: 70vw;
+    width: 7vw;
+    border-radius: 7vw;
+    .arrow {
+      font-size: 7vw;
+    }
+  }
+  .minute {
+    height: 50vw;
+    width: 5vw;
+    border-radius: 5vw;
+    .arrow {
+      font-size: 5vw;
+    }
+  }
+  .second {
+    height: 30vw;
+    width: 3vw;
+    border-radius: 3vw;
+    .arrow {
+      font-size: 3vw;
+    }
+  }
+}
